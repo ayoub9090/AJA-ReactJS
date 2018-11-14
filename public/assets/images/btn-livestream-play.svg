@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>3087EE68-4E2D-4A84-A213-936F9C03E4B5</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="v10-iphone-6-8" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="v12---Final" transform="translate(-131.000000, -21.000000)" fill="#DE384E">
+            <g id="mobile-header">
+                <g id="Group-5" transform="translate(60.000000, 16.000000)">
+                    <path d="M73,14 C73,10.14125 76.14125,7 80,7 C83.85875,7 87,10.14125 87,14 C87,17.85875 83.85875,21 80,21 C76.14125,21 73,17.85875 73,14 Z M71,14 C71,18.9725 75.0275,23 80,23 C84.9725,23 89,18.9725 89,14 C89,9.0275 84.9725,5 80,5 C75.0275,5 71,9.0275 71,14 Z M78,18 L83,14 L78,10 L78,18 Z" id="btn-livestream-play"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
