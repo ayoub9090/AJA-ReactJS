@@ -1147,3 +1147,29 @@ header.header .container {
 .sticky{
     z-index: 999;
 }
+
+@media (min-width: 992px){
+    .header__search{
+        height:0;
+        overflow: hidden;
+        padding:0;
+        transition:height 0.2s;
+    }
+    .header__search > div{
+        margin: 16px auto !important;
+    }
+    .header__search.open{
+        height:82px;
+    }
+}
+
+@media(max-width:991px){
+    .header__menu{
+        display: block;
+        height:0;
+        transition:height 0.2s;
+    }
+    .header__menu.open{
+        height: calc(100vh - 127px);
+    }
+}

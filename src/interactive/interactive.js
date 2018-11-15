@@ -6,7 +6,7 @@ class interactive extends Component {
         interactive: []
     }
     componentDidMount() {
-        axios.get('http://site.aja.qa/API/News/MostInteractive')
+        axios.get('http://www.aljazeera.net/API/News/MostInteractive')
             .then(response => {
                 this.setState({ interactive: response.data });
             });
@@ -17,7 +17,7 @@ class interactive extends Component {
                 <div className="leftCard__title"><span>الأكثر تفاعلاً</span></div>
                 <div className="newsBlock">
                     {this.state.interactive.map((int, index) => {
-                        return <a href="#" key={index}>{int.Title}</a>
+                        return <a href={int.FriendlyURL} key={index}>{int.Title}</a>
                     })}
 
                 </div>

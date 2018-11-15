@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './Cards.css';
 
 
-var cardsType = "big";
 class cards extends Component {
     state = {
         showShare: false
@@ -17,12 +16,12 @@ class cards extends Component {
                 <div className="card__img">
                     <a href={this.props.url}>
                         <picture>
-                            <img className="lazy initial loaded" src={this.props.ImageSrc} title={this.props.title} alt={this.props.title} />
+                            <img className="lazy initial loaded" src={this.props.LayoutType == "SmallCard" ? this.props.image2 : this.props.image1} title={this.props.title} alt={this.props.title} />
                         </picture>
                     </a>
                 </div>
                 <a className="card__title" href={this.props.url}>{this.props.title}</a>
-                {this.props.HasSummary =="True" ? <div className="card__text truncate130">{this.props.Summary}</div> : null}
+                {this.props.HasSummary === "True" ? <div className="card__text truncate130">{this.props.Summary}</div> : null}
                 <div className="shareContainer">
                     <div className="shareBtn" onClick={this.toggleShare}>
                         <span>شارك</span>

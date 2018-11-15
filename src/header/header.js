@@ -8,7 +8,7 @@ class header extends Component {
     state = {
         menuItems: [],
         searchShown: false,
-        mobMenuShown: this.isMob ? false : true,
+        mobMenuShown: false,
     }
 
     componentDidMount() {
@@ -18,9 +18,7 @@ class header extends Component {
                 this.setState({ menuItems: response.data.MenuItems });
             });
     }
-    isMob = () => {
-        return window.outerWidth <= 992 ? false : true;
-    }
+   
     toggleSearchBox = () => {
         this.setState({ searchShown: !this.state.searchShown });
     }
@@ -28,7 +26,7 @@ class header extends Component {
         this.setState({ mobMenuShown: !this.state.mobMenuShown })
     }
 
-
+    
     render() {
         return (
             <Sticky>
@@ -37,7 +35,7 @@ class header extends Component {
                         <a href="/" className="header__logo">
                             <img src="/assets/images/headerlogo.png" />
                         </a>
-                        <div className="header__menu" style={{ display: this.state.mobMenuShown? 'block' : 'none' }}>
+                        <div className="header__menu"  className={this.state.mobMenuShown ? 'header__menu open' : 'header__menu' }>
                             <div className="header__search" id="headerSearch_xs">
                                 <div className="container relative">
                                     <input type="text" className="header__searchInput" placeholder="ابحث" />
@@ -78,7 +76,7 @@ class header extends Component {
                             </div>
                         </div>
                     </div>
-                    <div className="header__search" style={{ display: this.state.searchShown ? 'block' : 'none' }} id="headerSearch_lg">
+                    <div  className={this.state.searchShown ? 'header__search open' : 'header__search' } id="headerSearch_lg">
                         <div className="container relative">
                             <input type="text" className="header__searchInput" placeholder="ابحث" />
                             <div className="header__searchBtn" >ابحث</div>

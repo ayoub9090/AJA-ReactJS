@@ -17,15 +17,21 @@ class App extends Component {
     loadedCards: 1,
     cardLoading: false,
     finishedLoading: false,
+    urlOfImages: 'http://www.aljazeera.net/',
+  }
+
+  isMob = () => {
+    return window.outerWidth <= 992 ? false : true;
   }
 
   componentDidMount() {
-    axios.get('http://site.aja.qa/api/news/' + this.state.loadedCards)
+    axios.get('http://www.aljazeera.net/api/news/' + this.state.loadedCards)
       .then(response => {
         this.setState({ cards: response.data });
       });
 
     window.onscroll = () => {
+
       if (window.innerHeight + document.documentElement.scrollTop >= document.documentElement.offsetHeight - 300) {
         if (!this.state.cardLoading && !this.state.finishedLoading) {
           this.loadCards();
@@ -34,6 +40,7 @@ class App extends Component {
     };
   }
 
+
   loadCards = () => {
     var loaderImg = document.createElement('img');
     loaderImg.src = "/assets/images/logoloader.gif";
@@ -41,7 +48,7 @@ class App extends Component {
     document.querySelector(".cardsHome").appendChild(loaderImg);
     this.state.cardLoading = true;
     this.setState({ loadedCards: this.state.loadedCards + 1 });
-    axios.get('http://site.aja.qa/api/news/' + this.state.loadedCards)
+    axios.get('http://www.aljazeera.net/api/news/' + this.state.loadedCards)
       .then(response => {
         document.querySelector(".cardsHome").removeChild(loaderImg);
         if (response.data.length > 0) {
@@ -65,7 +72,7 @@ class App extends Component {
             <div className="col-lg-12">
               {this.state.cards.map((card, index) => {
                 if (index == 0) {
-                  return <Mainstory key={index} url={card.FriendlyURL} LayoutType={card.LayoutType} title={card.Title} Summary={card.Summary} ImageSrc={card.ImageSrc.replace('https:', 'http:')} />
+                  return <Mainstory key={index} url={card.FriendlyURL} LayoutType={card.LayoutType} title={card.Title} Summary={card.Summary} ImageSrc={this.state.urlOfImages + card.MainImage1.replace('https:', 'http:')} />
                 }
               })}
 
@@ -73,7 +80,7 @@ class App extends Component {
             <div className="col-lg-8 cardsHome">
               {this.state.cards.map((card, index) => {
                 if (index > 0) {
-                  return <Cards key={index} HasSummary={card.HasSummary} url={card.FriendlyURL} LayoutType={card.LayoutType} title={card.Title} Summary={card.Summary} ImageSrc={card.ImageSrc.replace('https:', 'http:')} />
+                  return <Cards key={index} HasSummary={card.HasSummary} url={card.FriendlyURL} LayoutType={card.LayoutType} title={card.Title} Summary={card.Summary} image1={this.state.urlOfImages + card.MainImage1.replace('https:', 'http:')} image2={this.state.urlOfImages + card.MainImage2.replace('https:', 'http:')} />
                 }
               })}
 
