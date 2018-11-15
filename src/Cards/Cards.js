@@ -13,16 +13,16 @@ class cards extends Component {
 
     render() {
         return (
-            <div className={this.props.LayoutType=="SmallCard"?'card card-small counted':'card counted'}>
+            <div className={this.props.LayoutType == "SmallCard" ? 'card card-small counted' : 'card counted'}>
                 <div className="card__img">
                     <a href={this.props.url}>
-                    <picture>
-                        <img className="lazy initial loaded" src={this.props.ImageSrc} title={this.props.title} alt={this.props.title} />
+                        <picture>
+                            <img className="lazy initial loaded" src={this.props.ImageSrc} title={this.props.title} alt={this.props.title} />
                         </picture>
                     </a>
                 </div>
                 <a className="card__title" href={this.props.url}>{this.props.title}</a>
-                <div className="card__text truncate130">{this.props.Summary}</div>
+                {this.props.HasSummary =="True" ? <div className="card__text truncate130">{this.props.Summary}</div> : null}
                 <div className="shareContainer">
                     <div className="shareBtn" onClick={this.toggleShare}>
                         <span>شارك</span>

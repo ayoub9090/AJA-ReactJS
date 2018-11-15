@@ -856,7 +856,7 @@ header.header .container {
         border-color: #737373 transparent transparent transparent;
         top: 0px;
         left: auto;
-        margin-right: 1px;
+        margin-right: 6px;
     }
 
     .header__left {
@@ -1136,6 +1136,14 @@ header.header .container {
     }
 }
 
-body{
-    padding-top:85px !important;
+.header__menu li.has-childs:hover .sub-menu,
+.header__menu li.has-childs .sub-menu:hover{
+    display: block;
+} 
+
+.willHavePaddingTopFixedHeader {
+    height: 92px;
+}
+.sticky{
+    z-index: 999;
 }

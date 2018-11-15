@@ -8,7 +8,7 @@
     "react": "^16.6.1",
     "react-dom": "^16.6.1",
     "react-scripts": "2.1.1",
-    "react-slide-toggle": "^0.1.13",
+    "react-sticky-el": "^1.0.20",
     "reactstrap": "^6.5.0"
   },
   "scripts": {
