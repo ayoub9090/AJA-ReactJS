@@ -21,7 +21,7 @@ class cards extends Component {
                         </picture>
                     </a>
                 </div>
-
+                <Link className="card__title" to={"/news/"+this.props.EntityID +"/"+ this.props.ObjectID + "/"}>{this.props.title}</Link>
                 <a className="card__title" href={"/news/"+this.props.EntityID +"/"+ this.props.ObjectID + "/"}>{this.props.title}</a>
                 {this.props.HasSummary === "True" ? <div className="card__text truncate130">{this.props.Summary}</div> : null}
                 <div className="shareContainer">

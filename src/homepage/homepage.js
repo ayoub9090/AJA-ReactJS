@@ -11,7 +11,6 @@ class Homepage extends Component {
     loadedCards: 1,
     cardLoading: false,
     finishedLoading: false,
-    urlOfImages: 'http://site.aja.qa/',
   } 
 
   isMob = () => {
@@ -19,7 +18,7 @@ class Homepage extends Component {
   } 
 
   componentDidMount() {
-    axios.get('http://site.aja.qa/api/news/' + this.state.loadedCards)
+    axios.get(process.env.REACT_APP_API_URI + '/api/news/' + this.state.loadedCards)
       .then(response => {
         this.setState({ cards: response.data });
       });
@@ -43,7 +42,7 @@ class Homepage extends Component {
     document.querySelector(".cardsHome").appendChild(loaderImg);
     this.state.cardLoading = true;
     this.setState({ loadedCards: this.state.loadedCards + 1 });
-    axios.get('http://site.aja.qa/api/news/' + this.state.loadedCards)
+    axios.get(process.env.REACT_APP_API_URI + '/api/news/' + this.state.loadedCards)
       .then(response => {
         document.querySelector(".cardsHome").removeChild(loaderImg);
         console.log(response.data);
@@ -65,7 +64,7 @@ class Homepage extends Component {
             <div className="col-lg-12">
               {this.state.cards.map((card, index) => {
                 if (index == 0) {
-                  return <Mainstory key={index} EntityID={card.EntityID} ObjectID={card.ObjectID} url={card.FriendlyURL} LayoutType={card.LayoutType} title={card.Title} Summary={card.Summary} ImageSrc={this.state.urlOfImages + card.MainImage1.replace('https:', 'http:')} />
+                  return <Mainstory key={index} EntityID={card.EntityID} ObjectID={card.ObjectID} url={card.FriendlyURL} LayoutType={card.LayoutType} title={card.Title} Summary={card.Summary} ImageSrc={process.env.REACT_APP_URI_ImagePath + card.MainImage1.replace('https:', 'http:')} />
                 }
               })}
 
@@ -73,7 +72,7 @@ class Homepage extends Component {
             <div className="col-lg-8 cardsHome">
               {this.state.cards.map((card, index) => {
                 if (index > 0) {
-                  return <Cards key={index} HasSummary={card.HasSummary} EntityID={card.EntityID} ObjectID={card.ObjectID} url={card.FriendlyURL} LayoutType={card.LayoutType} title={card.Title} Summary={card.Summary} image1={this.state.urlOfImages + card.MainImage1.replace('https:', 'http:')} image2={this.state.urlOfImages + card.MainImage2.replace('https:', 'http:')} />
+                  return <Cards key={index} HasSummary={card.HasSummary} EntityID={card.EntityID} ObjectID={card.ObjectID} url={card.FriendlyURL} LayoutType={card.LayoutType} title={card.Title} Summary={card.Summary} image1={process.env.REACT_APP_URI_ImagePath+ card.MainImage1.replace('https:', 'http:')} image2={process.env.REACT_APP_URI_ImagePath + card.MainImage2.replace('https:', 'http:')} />
                 }
               })}
 

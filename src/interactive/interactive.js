@@ -6,7 +6,7 @@ class interactive extends Component {
         interactive: []
     }
     componentDidMount() {
-        axios.get('http://site.aja.qa/API/News/MostInteractive')
+        axios.get(process.env.REACT_APP_API_URI + '/API/News/MostInteractive')
             .then(response => {
                 this.setState({ interactive: response.data });
             });

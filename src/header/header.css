@@ -1172,5 +1172,11 @@ header.header .container {
     .header__menu.open{
         height: calc(100vh - 127px);
     }
+    .willHavePaddingTopFixedHeader {
+        height: 82px !important;
+    }
 }
 
+#root > div:first-child > div > div:first-child{
+    transform: none !important;
+}

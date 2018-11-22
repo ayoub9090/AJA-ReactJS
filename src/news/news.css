@@ -2845,7 +2845,7 @@ time {
 
 #mediaSection figcaption {
     color: #6c6b6c;
-    font-size: 12px;
+    font-size: 16px;
     margin-top: 10px;
     font-family: Greta;
 }
@@ -3390,7 +3390,7 @@ table.mainthumbimagetable span, table.mainthumbimagetable strong {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 50% auto;
-    bottom: 1.5em;
+    bottom: 1.8em;
     content: "";
     height: 0;
     left: 6px;

@@ -8,6 +8,7 @@ import './App.css';
 
 
 class App extends Component {
+  
   render() {
     return (
       <div>
@@ -18,7 +19,7 @@ class App extends Component {
         <Router>
           <Switch>
             <Route path="/" exact component={Homepage} />
-            <Route path="/news" component={News} />
+            <Route path="/news/:id/:type" component={News} />
           </Switch>
         </Router>
 

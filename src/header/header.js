@@ -14,7 +14,7 @@ class header extends Component {
 
     componentDidMount() {
 
-        axios.get('http://site.aja.qa/api/header')
+        axios.get(process.env.REACT_APP_API_URI + 'api/header')
             .then(response => {
                 this.setState({ menuItems: response.data.MenuItems });
             });
