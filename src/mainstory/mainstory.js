@@ -5,12 +5,12 @@ const mainstory = (props) => {
         <div className="mainStory">
             <div className="row">
                 <div className="col-lg-7">
-                    <a href={props.url}>
+                    <a href={"/news/"+props.EntityID +"/"+ props.ObjectID + "/"}>
                         <img className="lazy initial loaded" src={props.ImageSrc} alt={props.title} title={props.title} />
                     </a>
                 </div>
                 <div className="col-lg-5">
-                    <a href={props.url} className="mainStory__title">{props.title}</a>
+                    <a href={"/news/"+props.EntityID +"/"+ props.ObjectID + "/"} className="mainStory__title">{props.title}</a>
                     <div className="card__text">{props.Summary}</div>
                     <div className="shareContainer">
                         <div className="shareBtn">

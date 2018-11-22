@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link } from 'react-router-dom';
 import './Cards.css';
 
 
@@ -20,7 +21,8 @@ class cards extends Component {
                         </picture>
                     </a>
                 </div>
-                <a className="card__title" href={this.props.url}>{this.props.title}</a>
+
+                <a className="card__title" href={"/news/"+this.props.EntityID +"/"+ this.props.ObjectID + "/"}>{this.props.title}</a>
                 {this.props.HasSummary === "True" ? <div className="card__text truncate130">{this.props.Summary}</div> : null}
                 <div className="shareContainer">
                     <div className="shareBtn" onClick={this.toggleShare}>

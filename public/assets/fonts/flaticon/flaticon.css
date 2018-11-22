@@ -1,0 +1,59 @@
+	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 19/07/2017 11:06
+  	*/
+
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("/Content/flaticon/Flaticon.eot");
+  src: url("/Content/flaticon/Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("/Content/flaticon/Flaticon.woff") format("woff"),
+       url("/Content/flaticon/Flaticon.ttf") format("truetype"),
+       url("/Content/flaticon/Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("/Content/flaticon/Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+  font-family: Flaticon;
+font-style: normal;
+}
+
+.flaticon-delivery:before { content: "\f100"; }
+.flaticon-line-chart:before { content: "\f101"; }
+.flaticon-mail-icon:before { content: "\f102"; }
+.flaticon-rss-sign:before { content: "\f103"; }
+.flaticon-play-arrow:before { content: "\f104"; }
+.flaticon-comment-black-rectangular-speech-bubble-interface-symbol:before { content: "\f105"; }
+.flaticon-facebook-logo:before { content: "\f106"; }
+.flaticon-google-plus-social-logotype:before { content: "\f107"; }
+.flaticon-instagram-social-network-logo-of-photo-camera:before { content: "\f108"; }
+.flaticon-twitter-black-shape:before { content: "\f109"; }
+.flaticon-whatsapp-logo:before { content: "\f10a"; }
+.flaticon-printing-tool:before { content: "\f10b"; }
+.flaticon-caret-down:before { content: "\f10c"; }
+.flaticon-like:before { content: "\f10d"; }
+.flaticon-right-quote:before { content: "\f10e"; }
+.flaticon-magnifying-glass:before { content: "\f10f"; }
+.flaticon-right-arrow-1:before { content: "\f110"; }
+.flaticon-listen-icon:before { content: "\f111"; }
+.flaticon-menu:before { content: "\f112"; }
+.flaticon-right-arrow:before { content: "\f113"; }
+.flaticon-left-arrow:before { content: "\f114"; }
+.flaticon-refresh:before { content: "\f115"; }
+.flaticon-youtube:before { content: "\f116"; }
+.flaticon-play-button:before { content: "\f117"; }
+.flaticon-minus:before { content: "\f118"; }
+.flaticon-plus:before { content: "\f119"; }
+.flaticon-cancel:before { content: "\f11a"; }
+.flaticon-contacts-social-network:before { content: "\f11b"; }
+.flaticon-left-quote:before { content: "\f11c"; }
